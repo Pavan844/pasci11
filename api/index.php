@@ -9,7 +9,7 @@ $end = $endTimestamp ? date('Ymd\THis', $endTimestamp) : 'unknown';
 $id = $_GET['id'] ?? exit;
 $channelInfo = getChannelInfo($id);
 $dashUrl = $channelInfo['streamData']['MPD='] ?? exit;
-if (strpos($dashUrl, 'https://pasci11.vercel.app/') !== 0) {
+if (strpos($dashUrl, 'https://pasci11.vercel.app') !== 0) {
     header("Location: $dashUrl");
     exit;
 }
